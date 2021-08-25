@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="../static/css/index.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="page-header">
+				<p class="help-block"> </p>
+				<h1>
+					Automatic License Plate Recognition System —— demo
+				</h1>
+				<h2>
+					____________________________________________________________________________
+				</h2>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-7">
+			<h3>
+				PICTURE
+			</h3>
+			<p class="help-block"> </p>
+			<img alt="License Plate Image" src={{imagePath1}} class="rounded">
+			<form role="form" action="/" method="post" enctype="multipart/form-data">
+				<div class="form-group">
+					<p class="help-block"> </p>
+					<input type="file" name="file" class="form-control-file" id="exampleInputFile" accept=".png, .jpg, .jpeg">
+					<p class="help-block"> </p>
+				</div>
+
+				<button type="submit" class="btn btn-primary">
+					Upload
+				</button>
+			</form>
+		</div>
+		<div class="col-md-5">
+			<h3>
+				RESULT
+			</h3>
+			<p class="help-block"> </p>
+			<img alt="Result Image" src={{imagePath2}} class="rounded">
+			<p class="help-block"> </p>
+			<h4>
+				{{label}}
+			</h4>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<h2>
+				____________________________________________________________________________
+			</h2>
+			<h3>
+				OPERATIONS
+			</h3>
+			<p class="help-block"> </p>
+			<div class="row">
+				<div class="col-md-3">
+					 
+					<button type="button" class="btn btn-primary btn-block" Onclick="window.location.href='{{url_for('detect')}}'">
+						License Plate Detection
+					</button>
+				</div>
+				<div class="col-md-1">
+				</div>
+				<div class="col-md-3">
+					 
+					<button type="button" class="btn btn-primary btn-block" Onclick="window.location.href='{{url_for('fgsm1')}}'">
+						FGSM Attack before Defending
+					</button>
+				</div>
+				<div class="col-md-1">
+				</div>
+				<div class="col-md-3">
+					 
+					<button type="button" class="btn btn-primary btn-block" Onclick="window.location.href='{{url_for('pgd1')}}'">
+						PGD Attack before Defending
+					</button>
+				</div>
+				<div class="col-md-1">
+				</div>
+			</div>
+			<p class="help-block"> </p>
+			<div class="row">
+				<div class="col-md-3">
+					 
+					<button type="button" class="btn btn-primary btn-block" Onclick="window.location.href='{{url_for('recognize')}}'">
+						Optical Character Recognition
+					</button>
+				</div>
+				<div class="col-md-1">
+				</div>
+				<div class="col-md-3">
+					 
+					<button type="button" class="btn btn-primary btn-block" Onclick="window.location.href='{{url_for('fgsm2')}}'">
+						FGSM Attack after Defending
+					</button>
+				</div>
+				<div class="col-md-1">
+				</div>
+				<div class="col-md-3">
+					 
+					<button type="button" class="btn btn-block btn-primary" Onclick="window.location.href='{{url_for('pgd2')}}'">
+						PGD Attack after Defending
+					</button>
+				</div>
+				<div class="col-md-1">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<h2>
+				____________________________________________________________________________
+			</h2>
+			<h3>
+				DESCRIPTION
+			</h3>
+			<p class="help-block"> </p>
+			<p>
+				1. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+			</p>
+			<p>
+				2. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+			</p>
+			<p>
+				3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+			</p>
+		</div>
+	</div>
+</div>
+
+    <script src="../static/js/scripts.js"></script>
+  </body>
+</html>
